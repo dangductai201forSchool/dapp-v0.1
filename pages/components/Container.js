@@ -1,4 +1,4 @@
-import { useAccount, useContractRead } from 'wagmi'
+import { useAccount, useContractRead,useSwitchNetwork } from 'wagmi'
 import { useState } from 'react';
 
 import { BigNumber, utils } from 'ethers';
@@ -76,12 +76,11 @@ export default function Container() {
     }
 
     const WapperMain = () => {
-        const { address, isConnected } = useAccount();
         const Content = () => {
-            
+            const { chains, error, isLoading, pendingChainId, switchNetwork } =useSwitchNetwork()
             return (
                 <div className='DAO__content'>
-                    {dashboardClicked === 1 ? (<Home></Home>)
+                    {(dashboardClicked === 1 || isLoading) ? (<Home></Home>)
                         : (
                             dashboardClicked === 2 ? (
                                 <PredictionNow></PredictionNow>

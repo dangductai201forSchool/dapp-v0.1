@@ -45,7 +45,7 @@ const PredictionNow = () => {
         const [isEndedClick, setIsEndedClick] = useState(false);
         const MatchesButton = () => {
            return(
-            <div className='predict-match-btn-div'>
+            <div className='predict-match-btn-div bg-rose-5000'>
             <button onClick={() => setIsEndedClick(false)} target="_self" className={isEndedClick ? 'predict-match-btn' : 'predict-match-btn-target'}>
                 Current Matches
             </button>
@@ -55,7 +55,7 @@ const PredictionNow = () => {
 
         const EndingsButton = () => {
             return(
-                <div className='predict-match-btn-div'>
+                <div className='predict-match-btn-div bg-rose-5000'>
                 <button onClick={() => setIsEndedClick(true)} target="_self" className={isEndedClick ? 'predict-match-btn-target' : 'predict-match-btn'}>
                     Endings Matches
                 </button>

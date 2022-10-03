@@ -71,7 +71,7 @@ const Matches = () => {
 
             const { data, isLoading, isSuccess, write } = useContractWrite(config);
 
-            return <button className= 'predict-btn'  onClick={() => write()}>
+            return <button className= 'font-easport predict-btn'  onClick={() => write()}>
                                     {isLoading? 'Predicting...':(
                                         isSuccess?'Predicted': props.value 
                                     )}
@@ -81,33 +81,52 @@ const Matches = () => {
         
 
         return data == null?(<div></div>):(
-            data.slice().sort((a,b) => Number.parseInt(b.matchId) - Number.parseInt(a.matchId)).map((dt) =>
-            <li className={isMatchStarted(Number.parseInt(dt.matchId))?'match-item-started':'match__item'}>
+            data.slice().sort((a,b) => Number.parseInt(b.matchId) - Number.parseInt(a.matchId)).map((dt) => {
+                const matchId = Number.parseInt(dt.matchId);
+                const isStarted = isMatchStarted(matchId);
+                const stTeam =dt.stTeam;
+                const ndTeam =dt.ndTeam;
+                const stTeamLogo = teams[stTeam]['logo-url'];
+                const ndTeamLogo = teams[ndTeam]['logo-url'];
+                const startTime =  (new Date(Number.parseInt(dt.startTime) * 1000)).toLocaleString('en-US', { timeZone: "UTC" });
+                const isUserPredicted = isPredicted(matchId); 
+                return (                    
+            <li className= {isStarted?'match-item-started ':'match__item'}>
                 <a target="_self" className='item--link font-easport w-full block py-2 pl-3 text-white'>
-                    <p>Id: {Number.parseInt(dt.matchId)}</p>
-                    <p> {dt.stTeam}
-                        <img src= {teams[dt.stTeam]['logo-url']}></img> </p>
-                    <p>vs</p>
-                    <p>{dt.ndTeam}
-                        <img src= {teams[dt.ndTeam]['logo-url']}></img></p>
-                    <p>Start time: {(new Date(Number.parseInt(dt.startTime) * 1000)).toLocaleString('en-US', { timeZone: "UTC" })} (UTC)</p>
+                    <div className="match-id-div"><p className="font-easport">Match Id: {matchId}</p></div>
+                    <div className="item-content">
+                        <div className="team-card"><p className="font-easport team-name"> {stTeam}</p>
+                    <img className="team-img" src= {stTeamLogo}></img>
+                    </div>
+                    <div className="vs-card"><p className="font-easport">vs</p></div>
+                    
+                    <div className="team-card"><p className="font-easport team-name">{ndTeam}</p>
+                    <img className="team-img" src= {ndTeamLogo}></img>
+                    </div>
+                    <div className="match-time-start">
+                        <p className="font-easport">{startTime} (UTC)</p>
+                        </div>
+                    
+                    </div>
                 </a>
                 {isEnounghSFS()?(
-                        isMatchStarted(Number.parseInt(dt.matchId))?(
-                            <div></div>
+                        isStarted?(
+                            <div className="match-time-start"><p className="font-easport">Match has started already!!!</p></div>
                         ):(
-                            isPredicted(Number.parseInt(dt.matchId))?(
-                                <div><p>You has predicted yet</p></div>
+                            isUserPredicted?(
+                                <div className="match-time-start"><p className="font-easport">Predicted already</p></div>
                             ):(
-                                <div>
-                                    <PredictButton  matchId={Number.parseInt(dt.matchId)} result={1} value={dt.stTeam+' Win'}></PredictButton>
+                                <div className="predict-btn-div">
+                                <PredictButton  matchId={Number.parseInt(dt.matchId)} result={1} value={dt.stTeam}></PredictButton>
                                 <PredictButton  matchId={Number.parseInt(dt.matchId)} result={3} value={'Draw'}> draw</PredictButton>
-                                <PredictButton  matchId={Number.parseInt(dt.matchId)} result={2} value= {dt.ndTeam+ ' Win'}></PredictButton>
+                                <PredictButton  matchId={Number.parseInt(dt.matchId)} result={2} value= {dt.ndTeam}></PredictButton>
                                 </div>
                             )
                         )
                     ):(<div><p>Not enoungh SFS</p></div>)}
             </li>
+                );
+            }
         ));
 
 

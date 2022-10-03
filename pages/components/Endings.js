@@ -35,7 +35,7 @@ const Endings = () => {
 
             return <button className= 'claim-btn'  onClick={() => write()}>
             {isLoading? 'Claiming...':(
-                isSuccess?'Claimed':'' 
+                isSuccess?'Claimed':'Claim' 
             )}
             </button>;
         }
@@ -44,24 +44,55 @@ const Endings = () => {
         return data== null?(
             <div></div>
         ):(
-            data.slice().sort((a,b) => Number.parseInt(b.matchId) - Number.parseInt(a.matchId)).map((dt) =>
-            <li className={isClaimAble(Number.parseInt(dt.matchId))?'match-item-claim-able':'match__item  '}>
+            data.slice().sort((a,b) => Number.parseInt(b.matchId) - Number.parseInt(a.matchId)).map((dt) =>{
+                const matchId = Number.parseInt(dt.matchId);
+                const claimAble = isClaimAble(matchId);
+                const stTeam = dt.stTeam;
+                const ndTeam = dt.ndTeam;
+                const stTeamLogo = teams[dt.stTeam]['logo-url'];
+                const ndTeamLogo = teams[dt.ndTeam]['logo-url'];
+                const startTime = (new Date(Number.parseInt(dt.startTime) * 1000)).toLocaleString('en-US', { timeZone: "UTC" });
+                const result = Number.parseInt(dt.result);
+                return(
+                    <li className={claimAble?'match-item-claim-able':'match-item-claim-unable'}>
                 <a target="_self" className='item--link font-easport w-full block py-2 pl-3 text-white'>
-                    <p>Id: {Number.parseInt(dt.matchId)}</p>
-                    <p> {dt.stTeam}
-                        <img src= {teams[dt.stTeam]['logo-url']}></img> </p>
-                    <p>vs</p>
-                    <p>{dt.ndTeam}
-                        <img src= {teams[dt.ndTeam]['logo-url']}></img></p>
-                    <p>Start time: {(new Date(Number.parseInt(dt.startTime) * 1000)).toLocaleString('en-US', { timeZone: "UTC" })} (UTC)</p>
-                    <p>Result: {Number.parseInt(dt.result)}</p>
-                    {isClaimAble(Number.parseInt(dt.matchId))?(
-                       <div>
-                        <ClaimButton matchId={Number.parseInt(dt.matchId)}></ClaimButton>
+                <div className="match-id-div"><p className="font-easport">Match Id: {matchId}</p></div>
+                <div className="item-content">
+                    <div className={result === 1?"team-card-win":"team-card"}>
+                        <p className="font-easport team-name"> {stTeam}</p>
+                         <img className="team-img" src= {stTeamLogo}></img>
+                         <div className="team-result-div"><p className={result === 1?"team-result-text-win":"team-result-text-lose"}>
+                        {result == 1&&'Win' }
+                        {result == 2&&'Lose' }
+                        {result == 3&&'Draw' }
+                        </p></div>
+                    </div>
+                    <div className="vs-card"><p className="font-easport">vs</p></div>
+                    
+                    <div className={result ===2? "team-card-win":"team-card"}><p className="font-easport team-name">{ndTeam}</p>
+                        <img className="team-img" src= {ndTeamLogo}></img>
+                        <div className="team-result-div"><p className={result === 2?"team-result-text-win":"team-result-text-lose"}>
+                        {result == 1&&'Lose' }
+                        {result == 2&&'Win' }
+                        {result == 3&&'Draw' }
+                        </p></div>
+                    </div>
+                    <div className="match-time-start">
+                        <p className="font-easport">{startTime} (UTC)</p>
+                        </div>
+                    
+                    </div>
+                
+                    {claimAble &&
+                       <div class="claim-btn-div">
+                        <ClaimButton matchId={matchId}></ClaimButton>
                        </div> 
-                    ):(<div><p>Wrong prediction</p></div>)}
+                    }
                 </a>
             </li>
+                );
+            }
+            
         ));
 
     }

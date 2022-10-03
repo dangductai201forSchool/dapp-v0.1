@@ -23,7 +23,7 @@ const bnbChain = {
   id: 56,
   name: 'Binance Smart Chain',
   network: 'bsc',
-  iconUrl: 'https://example.com/icon.svg',
+  iconUrl: 'https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Binance-Coin-BNB-icon.png',
   iconBackground: '#fff',
   nativeCurrency: {
     decimals: 18,
@@ -44,7 +44,7 @@ const tbnbChain = {
   id: 97,
   name: 'Test Binance Smart Chain',
   network: 'bsc testnet',
-  iconUrl: 'https://example.com/icon.svg',
+  iconUrl: 'https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Binance-Coin-BNB-icon.png',
   iconBackground: '#fff',
   nativeCurrency: {
     decimals: 18,
