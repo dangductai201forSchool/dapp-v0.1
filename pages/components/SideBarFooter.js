@@ -33,7 +33,7 @@ const SideBarFooter = () => {
                     <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
                         <a target="_blank" href="/">
                             <span>
-                                <i className='las la-hand-holding-usd text-2xl'>
+                                <i className='las la-dollar-sign text-2xl'>
 
                                 </i>
                             </span>
