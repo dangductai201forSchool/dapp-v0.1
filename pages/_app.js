@@ -52,7 +52,7 @@ const tbnbChain = {
     symbol: 'tBNB',
   },
   rpcUrls: {
-    default: 'https://data-seed-prebsc-2-s2.binance.org',
+    default: 'https://nd-312-721-276.p2pify.com/59072f6c8e2a6e0ec7e03b1680721560',
   },
   blockExplorers: {
     default: { name: 'BSCScan testnet', url: 'https://testnet.bscscan.com' },

@@ -1,0 +1,146 @@
+{
+    "liverpool": {
+        "name": "Liverpool",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2011/08/liverpool-logo-vector-400x400.png"
+    },
+    "manchestercity": {
+        "name": "Manchester City",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2017/05/manchester-city-fc-logo-300x300.png"
+    },
+    "chelsea": {
+        "name": "Chelsea",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2011/08/chelsea-logo-vector.png"
+    },
+    "arsenal": {
+        "name": "Arsenal",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2015/10/arsenal-fc-logo-300x300.png"
+    },
+    "manchesterunited": {
+        "name": "Manchester United",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2012/12/manchester-united-logo-vector.png"
+    },
+    "tottenham": {
+        "name": "Tottenham Hotspur",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/10/tottenham-hotspur-fc-logo-300x300.png"
+    },
+    "newcastle": {
+        "name": "Newcastle United",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/10/newcastle-united-logo-preview-300x300.png"
+    },
+    "leicester": {
+        "name": "Leicester City",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2015/10/leicester-city-fc-vector-logo-eps-svg-300x300.png"
+    },
+    "crystal": {
+        "name": "Crystal Palace",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2015/07/crystal-palace-fc-logo-vector-download-300x300.jpg"
+    },
+    "westham": {
+        "name": "Westham United",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2016/11/west-ham-united-fc-logo-preview-300x300.png"
+    },
+    "afcb": {
+        "name": "AFC Bournemouth",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2016/02/afc_bournemouth-logo_brandlogos.net_wifjg-300x300.png"
+    },
+    "astonvilla": {
+        "name": "Aston Villa",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/09/aston-villa-logo-300x300.png"
+    },
+    "southampton": {
+        "name": "Southampton",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/12/southampton-fc-logo-300x300.png"
+    },
+    "everton": {
+        "name": "Everton",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2016/11/everton-fc-logo-preview-300x300.png"
+    },
+    "fulham": {
+        "name": "Fulham",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/10/fulham-fc-logo-300x300.png"
+    },
+    "leed": {
+        "name": "Leeds United",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2020/11/leeds-united-fc-logo-300x300.png"
+    },
+    "brighton": {
+        "name": "Brighton & Hove Albion",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2018/09/brighton-hove-albion-logo-300x300.png"
+    },
+    "wolverhampton": {
+        "name": "Wolverhampton Wanderers",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/11/wolverhampton_wanderers_fc-logo-brandlogo.net_-300x300.png"
+    },
+    "brentford": {
+        "name": "Brentford",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2021/08/brentford-fc-logo-300x300.png"
+    },
+    "nottingham": {
+        "name": "Nottingham Forest",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2022/03/nottingham_forest-logo-brandlogo.net_-300x300.png"
+    },
+    "realmadrid": {
+        "name": "Real Madrid",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/10/real_madrid_cf-brandlogo.net_-300x300.png"
+    },
+    "atleticomadrid": {
+        "name": "Atletico Madrid",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2021/09/atltico-madrid-logo-300x300.png"
+    },
+    "villarreal": {
+        "name": "Villarreal",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/12/villarreal_cf-logo-brandlogos.net_-300x300.png"
+    },
+    "sevilla": {
+        "name": "Sevilla",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/10/sevilla_fc-logo_brandlogos.net_uv8lu-300x300.png"
+    },
+    "barcelona": {
+        "name": "Barcelona",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/07/fc_barcelona-logo_brandlogos.net_tmdd6-512x512.png"
+    },
+    "juventus": {
+        "name": "Juventus",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2017/01/juventus_fc-brandlogo.net_-300x300.png"
+    },
+    "milan": {
+        "name": "AC Milan",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/10/ac-milan-logo-300x300.png"
+    },
+    "napoli": {
+        "name": "SSC Napoli",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2013/10/ssc-napoli-vector-logo.png"
+    },
+    "atalanta": {
+        "name": "Atalanta",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2012/12/atalanta-logo-vector.png"
+    },
+    "roma": {
+        "name": "AS Roma",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2015/07/as-roma-club-logo-vector-download-300x300.jpg"
+    },
+    "inter": {
+        "name": "Inter Milan",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2021/09/inter-milan-logo-300x300.png"
+    },
+    "frankfurt": {
+        "name": "Eintracht Frankfurt",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2019/02/eintracht_frankfurt-logo-brandlogo.net_-512x512.png"
+    },
+    "bayernmunich": {
+        "name": "Bayern Munich",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2014/11/fc-bayern-munich-logo-512x512.png"
+    },
+    "salzburg": {
+        "name": "Red Bull Salzburg",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2022/09/fc_red_bull_salzburg-logo_brandlogos.net_2si1z-512x526.png"
+    },
+    "ajax": {
+        "name": "Amsterdamsche FC Ajax",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2013/10/amsterdamsche-fc-ajax-afc-vector-logo.png"
+    },
+    "psg": {
+        "name": "Paris Saint-Germain",
+        "logo-url": "https://brandlogos.net/wp-content/uploads/2013/10/paris-saint-germain-fc-vector-logo.png"
+    }
+}

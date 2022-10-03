@@ -1,6 +1,6 @@
 import { useAccount, useContractRead } from 'wagmi'
 import predictionGameABI from '../contracts/PredictionGame_abi.json';
-const predictionGameAddr = '0x23e3B0b551be6FEAD211a007E44Ed8365787bFa9';
+const predictionGameAddr = '0xA49c5cD7200303c410A1E4656503688D490Ffa60';
 
 const UserReward = () => {
     const { address, isConnected } = useAccount();
@@ -18,7 +18,7 @@ const UserReward = () => {
             <div className='border-[5px] border-rose-3000 p-3 md:px-8 rounded-2xl w-full md:w-auto md:mr-11'>
                 <div className='balance-reward-div'>
                     <div className='your-current-reward-div'>
-                        <h3 className='text-rose-3000 text-2xl font-tommy-semibold uppercase my-1'>
+                        <h3 className='text-3xl font-easport !font-bold text-rose-3000 mb-2'>
                             Your current reward
 
                         </h3>

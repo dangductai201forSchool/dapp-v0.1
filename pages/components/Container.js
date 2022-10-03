@@ -17,7 +17,7 @@ export default function Container() {
         const SideBarContent = () => {
             return (
                 <div className='sidebar__content mt-3 ml-3 mb-4'>
-                    <ul className='sidebar__list-nav font-tommy-medium !space-y-3'>
+                    <ul className='sidebar__list-nav font-easport !space-y-3'>
                         <li className={dashboardClicked === 1 ? 'sidebar__item-nav rounded-tl-3xl rounded-bl-3xl bg-gradient-primary-pink-white hover:bg-gradient-to-r from-[#ab033e] to-[#ffffff] cursor-pointer' : 'sidebar__item-nav rounded-tl-3xl rounded-bl-3xl false hover:bg-gradient-to-r from-[#ab033e] to-[#ffffff] cursor-pointer'}>
                             <a target="_self" className={dashboardClicked === 1 ? 'item--link font-easport w-full block py-2 pl-3 text-white' : 'item--link font-easport w-full block py-2 pl-3 text-rose-2000'}
                                 onClick={() => setDashboardClicked(1)}>
@@ -65,7 +65,7 @@ export default function Container() {
 
         return (
             <div className='DAO__main-left min-w-[240px] w-[240px] md:block fixed md:static top-0 z-[999] right-0 h-screen hidden md:h-auto shadow-[0_0_10px_3px_#e293ae] md:shadow-none bg-[#fff] md:bg-transparent transition-all'>
-                <div className='DAO__sidebar bg-primary-white-1000 rounded-2xl pb-[35px] relative'>
+                <div className='DAO__sidebar border-rose-3000 border-[5px] bg-primary-white-1000 rounded-2xl relative'>
                     <SideBarTop></SideBarTop>
                     <SideBarContent></SideBarContent>
                     <SideBarFooter></SideBarFooter>
@@ -94,7 +94,7 @@ export default function Container() {
 
 
         return (<div className='DAO__main-center flex-grow'>
-            <div id='DAO__wrapper-main' className='DAO__wrapper-main bg-primary-white-1000 rounded-2xl'>
+            <div id='DAO__wrapper-main' className='DAO__wrapper-main bg-primary-white-1000 rounded-2xl border-rose-3000 border-[5px]'>
                 <Header></Header>
                 <Content></Content>
             </div>

@@ -1,4 +1,3 @@
-
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -4630,12 +4629,12 @@
    font-weight: 900;
  }
  /*! 
- * @package IcoFont 
- * @version 1.0.1 
- * @author IcoFont https://icofont.com 
- * @copyright Copyright (c) 2015 - 2018 IcoFont 
- * @license - https://icofont.com/license/
- */
+  * @package IcoFont 
+  * @version 1.0.1 
+  * @author IcoFont https://icofont.com 
+  * @copyright Copyright (c) 2015 - 2018 IcoFont 
+  * @license - https://icofont.com/license/
+  */
  @font-face {
    font-family: IcoFont;
    font-weight: 400;
@@ -16519,6 +16518,7 @@
    content: "";
  }
  .la-globe:before {
+   font-family: Line Awesome Free;
    content: "";
  }
  .la-globe-africa:before {
@@ -19096,8 +19096,7 @@
    src: url(/_next/static/media/la-regular-400.7b67c533.eot);
    src: url(/_next/static/media/la-regular-400.7b67c533.eot)
        format("embedded-opentype"),
-     url(/_next/static/media/la-regular-400.bfaaab46.woff2)
-       format("woff2"),
+     url(/_next/static/media/la-regular-400.woff2) format("woff2"),
      url(/_next/static/media/la-regular-400.f45e994d.woff)
        format("woff"),
      url(/_next/static/media/la-regular-400.df0ba4ff.ttf)
@@ -19116,7 +19115,7 @@
    src: url(/_next/static/media/la-solid-900.85692007.eot);
    src: url(/_next/static/media/la-solid-900.85692007.eot)
        format("embedded-opentype"),
-     url(/__next/static/meida/la-solid-900.8e5c796f.woff2)
+     url(/_next/static/media/la-solid-900.8e5c796f.woff2)
        format("woff2"),
      url(/_next/static/media/la-solid-900.7dd81512.woff)
        format("woff"),
@@ -22121,8 +22120,8 @@
  }
  
  /*
- ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
- */
+  ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+  */
  *,
  :after,
  :before {
@@ -24197,7 +24196,8 @@
  
  @font-face {
    font-family: easport;
-   src: url(/fonts/RoundControl-Regular.otf) format("opentype");
+   src: url(/_next/static/media/RoundControl-Regular.otf)
+     format("opentype");
    font-weight: normal;
    font-style: normal;
  }
@@ -24330,7 +24330,7 @@
    color: #580e28 !important;
  }
  .bg-primary-white-1000 {
-   background-color: rgba(255, 255, 255, 0.5) !important;
+   background-color: rgba(255, 255, 255, 0.8) !important;
  }
  .bg-primary-white-2000 {
    background-color: #e9bdcd !important;
@@ -24590,8 +24590,7 @@
  .DAO__sidebar .sidebar__item-nav:hover a {
    color: #fff !important;
  }
-
-
+ 
  .dark-theme {
    background-color: #423301;
    color: #fde082;
@@ -25863,7 +25862,6 @@
    color: #000000;
  }
  
- 
  h3.text-rose-3000 {
    width: 65%;
    display: inline-block;
@@ -25874,7 +25872,7 @@
    display: inline-block;
  }
  p.SFS-symbol {
-   width:15%;
+   width: 15%;
    display: inline-block;
    font-size: 1.3em;
  }
@@ -25882,22 +25880,21 @@
  div.border-rose-3000.p-3 {
    width: 100%;
    margin-right: 0;
-     vertical-align: middle;
+   vertical-align: middle;
  }
  
  .predict-match-btn-div {
-   width:50%;
-   display:inline-block;
+   width: 50%;
+   display: inline-block;
    text-align: center;
-    }
-
+ }
  
  .predict-match-btn {
    color: #fff;
-     width:100%;
-     font-family: easport, Sans-serif;
-     background-color:  #AB033E;
-   padding:1.5rem;
+   width: 100%;
+   font-family: easport, Sans-serif;
+   background-color: #ab033e;
+   padding: 1.5rem;
    border-top-left-radius: 0.5rem;
    border-top-right-radius: 0.5rem;
    border-color: #fff;
@@ -25906,53 +25903,189 @@
  
  .predict-match-btn-target {
    color: #fff;
-     width:100%;
-     font-family: easport, Sans-serif;
-     background-color: #ff0b61;
-   padding:1.5rem;
+   width: 100%;
+   font-family: easport, Sans-serif;
+   background-color: #ff0b61;
+   padding: 1.5rem;
    border-top-left-radius: 0.5rem;
    border-top-right-radius: 0.5rem;
-   
-
  }
  
  @media (min-width: 640px) {
-	.TableTopStaker_wrapperTable__zPrbO table {
-		display: inline-table !important;
-	}
-	.TableTopStaker_wrapperTable__zPrbO thead tr:not(:first-child) {
-		display: none;
-	}
-}
-@media (max-width: 640px) {
-	.TableTopStaker_wrapperTable__zPrbO td:last-child,
-	.TableTopStaker_wrapperTable__zPrbO th:last-child {
-		border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
-	}
-	.TableTopStaker_wrapperTable__zPrbO tr:last-child td,
-	.TableTopStaker_wrapperTable__zPrbO tr:last-child th {
-		border-bottom: none;
-	}
-}
+   .TableTopStaker_wrapperTable__zPrbO table {
+     display: inline-table !important;
+   }
+   .TableTopStaker_wrapperTable__zPrbO thead tr:not(:first-child) {
+     display: none;
+   }
+ }
+ @media (max-width: 640px) {
+   .TableTopStaker_wrapperTable__zPrbO td:last-child,
+   .TableTopStaker_wrapperTable__zPrbO th:last-child {
+     border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+   }
+   .TableTopStaker_wrapperTable__zPrbO tr:last-child td,
+   .TableTopStaker_wrapperTable__zPrbO tr:last-child th {
+     border-bottom: none;
+   }
+ }
+ 
+ .match-list {
+   background-color: #ff0b61;
+   border-radius: 0.5rem;
+   padding-bottom: 2rem !important;
+ }
+ 
+ .match__item {
+   --tw-space-y-reverse: 0.2 !important;
+   margin-top: 2rem !important;
+   border-radius: 0.5rem;
+   margin-left: 1.5rem;
+   margin-right: 1.5rem;
+   background-color: rgba(29, 223, 126, 0.6);
+ }
+ 
+ .match__item:hover {
+   color: #b0f !important;
+   background: linear-gradient(50deg, #ab033e, #fff) !important;
+ }
+ 
+ .welcome-div {
+   text-align: center;
+ }
+ 
+ .home-content {
+   padding: 2rem 0;
+ }
+ 
+ .nftcg-content-text {
+   text-align: center;
+ }
+ 
+ .social--item {
+   width: 20%;
+ }
+ .nftcg-text {
+   font-size: 3em;
+   color: #dd2d92;
+ 
+   -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: #130b2e;
+ }
+ 
+ .welcome-playgame {
+   font-size: 3.5em;
+   color: #430857;
+   -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: #922020;
+ }
+ .welcome-andearnwith {
+   font-size: 2em;
+   color: #430857;
+ }
+ .welcome-sportfantasy {
+   font-size: 4em;
+   color: #dd2d92;
+ 
+   -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: #130b2e;
+ }
+ 
+ .about-text {
+   font-size: 1.5em;
+   display: inline-block;
+   vertical-align: middle;
+   width: 50%;
+ }
+ 
+ .about-buynow {
+   vertical-align: middle;
+   display: inline-block;
+   width: 50%;
+ }
+ 
+ .about-buynow > img {
+   padding-left: 3em;
+ }
+ 
+ .about-content {
+   padding: 3em;
+ }
+ 
+ .about-content-list {
+   display: inline-block;
+   width: 90%;
+   font-size: 0.9em;
+ }
+ 
+ .las.la-angle-double-right {
+   width: 10%;
+ }
+ 
+ .playingpredictiongame-item {
+   color: #c51f75;
+ }
+ 
+ .buynftcardgame-item {
+   color: #00a9ff;
+ }
+ 
+ .busdreward-item {
+   color: #c0a500;
+ }
+ 
+ .home-buynow-btn-div {
+   text-align: center;
+   padding: 2em 0 2em 3em;
+ }
+ 
+ .home-buynow-btn {
+   width: 50%;
+   padding: 2em;
+   background-color: blue;
+   margin: auto;
+   background-color: transparent;
+   background-image: linear-gradient(200deg, #e14d26 15%, #b547d0 85%);
+   border-radius: 20px;
+ }
+ 
+ .home-buynow-btn > a {
+   display: block;
+   width: 100%;
+   height: 100%;
+   color: #ffffff;
+ }
+ 
+ .home-buynow-btn > a > span {
+   font-size: 1.7em;
+ }
 
-.match-list{
-  background-color: #ff0b61;
-  border-radius: 0.5rem;
-  padding-bottom: 2rem !important;
-
-}
-
-.match__item {
+ /* ###################### */
+.match-item-started{
   --tw-space-y-reverse: 0.2 !important;
    margin-top: 2rem !important;
   border-radius: 0.5rem;
   margin-left:1.5rem;
   margin-right:1.5rem;
-    background-color: rgba(29, 223, 126,0.6);
+  background-color: #008dd2;
 }
 
-.match__item:hover {
-  color: #b0f !important;
-  background: linear-gradient(50deg, #ab033e, #fff) !important;
+.predict-btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
+.match-item-claim-able{
+  --tw-space-y-reverse: 0.2 !important;
+   margin-top: 2rem !important;
+  border-radius: 0.5rem;
+  margin-left:1.5rem;
+  margin-right:1.5rem;
+  background-color: #e2f108;
 }

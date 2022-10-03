@@ -16,27 +16,26 @@ const Header = () => {
         <div className='DAO__header pl-4 pr-4 py-4 lg:px-11'>
             <div className='flex flex-col md:flex-row md:justify-between md:items-center border-b-2 border-gray-300'>
                 <div className='text-rose-3000 relative md:static'>
-                    <h2 className='text-3xl !font-bold text-rose-3000 mb-2'>
+                    <h2 className='text-3xl font-easport !font-bold text-rose-3000 mb-2'>
                         Hello
-                        <span className='font-tommy-bold'>{isConnected ? ', SFS hodler' : ''}</span>
+                        <span className='font-easport'>{isConnected ? ', SFS hodler' : ''}</span>
                     </h2>
                     {isConnected ? (
-                        <p className="text-sm text-gray-500 md:text-pink-900 mb-3">
+                        <p className="text-1xl font-easport !font-bold text-rose-1000 mb-2">
                             Your wallet:&ensp;
-                            <span>{address}</span>
+                            {address}
                         </p>
                     ) : (
-                        <p className="text-sm text-gray-500 md:text-pink-900 mb-3">Please connect to your wallet&ensp;</p>
+                        <p className="text-1xl font-easport !font-bold text-rose-1000 mb-2">Please connect to your wallet&ensp;</p>
                     )}
                 </div>
                 <div className='flex flex-col md:flex-row space-x-3'>
                     {isConnected ? (
                         <div>
-                            <h3>Your Balance:</h3>
+                            <h3 className="text-1xl font-easport !font-bold text-rose-3000 mb-2">Your Balance:</h3>
                             <div>
                                 <span>
-                                    <strong>{Number.parseFloat(data) / (10 ** 8)}</strong>
-                                    &ensp;SFS
+                                    <strong className="text-1xl font-easport !font-bold text-rose-2000 mb-2">{Number.parseFloat(data) / (10 ** 8)} &ensp;SFS</strong>
                                 </span>
                             </div>
                         </div>
