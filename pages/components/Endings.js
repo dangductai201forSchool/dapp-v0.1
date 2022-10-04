@@ -47,15 +47,15 @@ const Endings = () => {
             data.slice().sort((a,b) => Number.parseInt(b.matchId) - Number.parseInt(a.matchId)).map((dt) =>{
                 const matchId = Number.parseInt(dt.matchId);
                 const claimAble = isClaimAble(matchId);
-                const stTeam = dt.stTeam;
-                const ndTeam = dt.ndTeam;
-                const stTeamLogo = teams[dt.stTeam]['logo-url'];
-                const ndTeamLogo = teams[dt.ndTeam]['logo-url'];
+                const stTeam = teams[dt.stTeam]['name']==null?(dt.stTeam):(teams[dt.stTeam]['name']);
+                const ndTeam = teams[dt.ndTeam]['name']==null?(dt.ndTeam):(teams[dt.ndTeam]['name']);
+                const stTeamLogo = teams[dt.stTeam]['logo-url']==null?(teams['default1']['logo-url']):(teams[dt.stTeam]['logo-url']);
+                const ndTeamLogo = teams[dt.ndTeam]['logo-url']==null?(teams['default1']['logo-url']):(teams[dt.ndTeam]['logo-url']);
                 const startTime = (new Date(Number.parseInt(dt.startTime) * 1000)).toLocaleString('en-US', { timeZone: "UTC" });
                 const result = Number.parseInt(dt.result);
                 return(
                     <li className={claimAble?'match-item-claim-able':'match-item-claim-unable'}>
-                <a target="_self" className='item--link font-easport w-full block py-2 pl-3 text-white'>
+                <a target="_self" className='item--link font-easport w-full block py-2 text-white'>
                 <div className="match-id-div"><p className="font-easport">Match Id: {matchId}</p></div>
                 <div className="item-content">
                     <div className={result === 1?"team-card-win":"team-card"}>

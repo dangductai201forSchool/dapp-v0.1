@@ -23041,6 +23041,9 @@ video {
 .basis-1\/3 {
 	flex-basis: 33.333333%;
 }
+.basis-2\/3 {
+	flex-basis: 66.666666%;
+}
 .basis-\[4rem\] {
 	flex-basis: 4rem;
 }
@@ -24386,7 +24389,7 @@ video {
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
-	font-family: tommy-regular;
+	font-family: easport;
 }
 body {
 	margin: 0;
@@ -24743,7 +24746,8 @@ strong {
 	border-color: hsla(0, 0%, 100%, 0.08);
 }
 #main-wrapper.home {
-	height: auto;
+	min-height:1800px;
+	height: 100vh;
 }
 html {
 	scrollbar-color: #f5f5f5 #ab033e;
@@ -25854,13 +25858,13 @@ input.checkbox:checked + .slider {
 }
 
 p.text-sm.text-primary-gray-2000.my-1 {
-	font-size: 1.3em;
+	font-size: 1.3rem;
 	font-weight: 900;
 	color: #000000;
 }
 
-h3.text-rose-3000 {
-	width: 65%;
+h2.text-rose-3000 {
+	width: 60%;
 	display: inline-block;
 }
 
@@ -25871,7 +25875,7 @@ p.text-rose-3000 {
 p.SFS-symbol {
 	width: 15%;
 	display: inline-block;
-	font-size: 1.3em;
+	font-size: 1.3rem;
 }
 
 div.border-rose-3000.p-3 {
@@ -25894,8 +25898,6 @@ div.border-rose-3000.p-3 {
 	padding: 1.5rem;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
-	border-color: rgba(var(--color-rose-5000), 1);
-	border-width: 0.1rem;
 }
 
 .predict-match-btn-target {
@@ -25961,6 +25963,10 @@ div.border-rose-3000.p-3 {
 	text-align: center;
 }
 
+.reward-formula {
+	text-align: center;
+}
+
 .home-content {
 	padding: 2rem 0;
 }
@@ -25973,25 +25979,26 @@ div.border-rose-3000.p-3 {
 	width: 20%;
 }
 .nftcg-text {
-	font-size: 3em;
+	line-height:4rem;
+	font-size: 3.5rem;
 	color: #dd2d92;
-
+	padding-top:2rem;
 	-webkit-text-stroke-width: 3px;
 	-webkit-text-stroke-color: #130b2e;
 }
 
 .welcome-playgame {
-	font-size: 3.5em;
+	font-size: 3.5rem;
 	color: #430857;
 	-webkit-text-stroke-width: 3px;
 	-webkit-text-stroke-color: #922020;
 }
 .welcome-andearnwith {
-	font-size: 2em;
+	font-size: 2rem;
 	color: #430857;
 }
 .welcome-sportfantasy {
-	font-size: 4em;
+	font-size: 4rem;
 	color: #dd2d92;
 
 	-webkit-text-stroke-width: 3px;
@@ -25999,7 +26006,7 @@ div.border-rose-3000.p-3 {
 }
 
 .about-text {
-	font-size: 1.5em;
+	font-size: 110%;
 	display: inline-block;
 	vertical-align: middle;
 	width: 50%;
@@ -26012,17 +26019,17 @@ div.border-rose-3000.p-3 {
 }
 
 .about-buynow > img {
-	padding-left: 3em;
+	padding:2rem 0 0 3rem;
 }
 
 .about-content {
-	padding: 3em;
+	padding: 3rem;
 }
 
 .about-content-list {
 	display: inline-block;
 	width: 90%;
-	font-size: 0.9em;
+	font-size: 100%;
 }
 
 .las.la-angle-double-right {
@@ -26043,12 +26050,12 @@ div.border-rose-3000.p-3 {
 
 .home-buynow-btn-div {
 	text-align: center;
-	padding: 2em 0 2em 3em;
+	padding: 2rem 0 2rem 3rem;
 }
 
 .home-buynow-btn {
-	width: 50%;
-	padding: 2em;
+	display:inline-block;
+	padding:1.5rem;
 	background-color: blue;
 	margin: auto;
 	background-color: transparent;
@@ -26064,7 +26071,7 @@ div.border-rose-3000.p-3 {
 }
 
 .home-buynow-btn > a > span {
-	font-size: 1.7em;
+	font-size: 120%;
 }
 
 /* ###################### */
@@ -26081,14 +26088,18 @@ div.border-rose-3000.p-3 {
 	background-color: #4caf50; /* Green */
 	border: none;
 	color: white;
-	padding: 15px 32px;
+	padding:1rem;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 1rem;
 	width: 25%;
-	border-radius: 0.5em;
-	margin: auto 1em;
+	border-radius: 0.5rem;
+	margin: auto 1rem;
+}
+
+.predict-btn:hover {
+	background-color: #18731c;
 }
 
 .match-item-claim-able {
@@ -26126,13 +26137,14 @@ div.border-rose-3000.p-3 {
 }
 
 .team-name {
+	overflow-wrap:break-word;
 	text-align: center;
 }
 
 .team-img {
 	display: block;
 	margin: auto;
-	height: 4em;
+	height: 4rem;
 }
 
 .match-time-start {
@@ -26141,11 +26153,7 @@ div.border-rose-3000.p-3 {
 
 .predict-btn-div {
 	text-align: center;
-	padding-bottom: 1em;
-}
-
-.item--link {
-	padding-left: 0;
+	padding-bottom: 1rem;
 }
 
 .item--link:hover {
@@ -26163,18 +26171,18 @@ div.border-rose-3000.p-3 {
 .team-result-text-win {
   font-family: easport;
   color: lime;
-  font-size: 2em;
+  font-size: 2rem;
   text-decoration: underline;
 }
 
 .team-result-text-lose {
   font-family: easport;
   color: red;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .claim-btn-div {
-  padding-right:1em;
+  padding-right:1rem;
   text-align: right;
 }
 
@@ -26192,4 +26200,59 @@ div.border-rose-3000.p-3 {
 .claim-btn:hover {
   color: white;
   background: rgb(3, 7, 76);
+}
+
+@media screen and (max-width: 480px) {
+	.wallet-address {
+		width: 300px;
+		overflow-wrap:break-word;
+	}
+	
+	.about-text {
+		width:100%;
+	}
+	.about-buynow {
+		width:100%;
+	}
+
+	
+	.about-buynow > img {
+		padding:2rem 0 0 0 !important;
+	}
+
+	.home-buynow-btn-div {
+		padding:2rem 0 2rem 0 !important;
+	}
+
+	.reward-formula {
+		text-align: left;
+	}
+
+	.predict-btn {
+		width:20%;
+		padding:0.7rem;
+		font-size:0.4rem;
+		overflow-wrap:break-word;
+	}
+}
+
+@media screen and (max-width: 386px) {
+	.predict-btn {
+		width:15%;
+		
+		font-size:0.25rem;
+		overflow-wrap:break-word;
+	}
+}
+
+.navbar-toggler{
+	width: 36px;
+	height: 26px;
+	float:right;
+}
+
+.navbar-toggler-div{
+	
+	width:100vw;
+	background-color: #ffffff; 
 }

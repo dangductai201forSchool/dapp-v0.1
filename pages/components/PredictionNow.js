@@ -57,7 +57,7 @@ const PredictionNow = () => {
             return(
                 <div className='predict-match-btn-div bg-rose-5000'>
                 <button onClick={() => setIsEndedClick(true)} target="_self" className={isEndedClick ? 'predict-match-btn-target' : 'predict-match-btn'}>
-                    Endings Matches
+                    Ended Matches
                 </button>
             </div>
             );
@@ -65,10 +65,10 @@ const PredictionNow = () => {
 
         return (
             <div className='mx-4 lg:mx-11 mt-8 mb-3 overflow-auto'>
-                <h3 className='mb-5 text-rose-3000 text-2xl font-tommy-semibold uppercase'>
+                <h3 className='mb-5 text-rose-3000 text-2xl font-easport uppercase'>
                     Predict now and earn reward
                 </h3>
-                <div className='DAO__table bg-rose-5000 rounded-2xl p-3 mb-7 '>
+                <div className='DAO__table bg-rose-5000 rounded-2xl p-3 mb-7 TableTopStaker_wrapperTable__zPrbO'>
                     <div className='match-list'>
                         <MatchesButton></MatchesButton>
                         <EndingsButton></EndingsButton>

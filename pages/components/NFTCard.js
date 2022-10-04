@@ -9,7 +9,7 @@ const NFTCard = () => {
 					<div className="nftcg-content-text p-3 font-easport text-rose-3000 text-3xl">Buy your favorite super star NFT card</div>
                     <div className="nftcg-content-text p-3 font-easport text-rose-3000 text-3xl">Build your dream team</div>
                     <div className="nftcg-content-text p-3 font-easport text-rose-3000 text-3xl">And compete with other players in our SFS league</div>
-                    <img className="p-3" src="/nftcg.png"></img>
+                    <img className="nftcg-img p-3" src="/nftcg.png"></img>
 				</div>
 			</div>
 		</div>

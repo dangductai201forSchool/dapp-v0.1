@@ -12,12 +12,15 @@ const Header = () => {
 		functionName: "balanceOf",
 		args: address,
 	});
+
 	return (
 		<div className="DAO__header pl-4 pr-4 py-4 lg:px-11">
 			<div className="flex flex-col md:flex-row md:justify-between md:items-center border-b-2 border-gray-300">
-				<div className="text-rose-3000 relative md:static">
+				<div className="mb-4 md:hidden">
+					<img className="w-[60px] m-auto" src="./logo-crop.png"></img>
+				</div>
 					{isConnected ? (
-						<div className="text-rose-3000 relative md:static">
+						<div className=" text-rose-3000 relative md:static">
 							<h2 className="text-3xl font-easport !font-bold text-rose-3000 mb-2">
 								Hello
 								<span className="font-easport">
@@ -26,22 +29,25 @@ const Header = () => {
 										: ""}
 								</span>
 							</h2>
-							<p className="text-1xl font-easport !font-bold text-rose-1000 mb-2">
+							<p className=" wallet-address text-1xl font-easport !font-bold text-rose-1000 mb-2">
 								Your
 								wallet:&ensp;
 								{address}
 							</p>
+
 						</div>
 					) : (
 						<div className="text-rose-3000 relative md:static">
-							<p className="text-3xl font-easport !font-bold text-rose-1000 mb-2">
+							<p className=" text-3xl font-easport !font-bold text-rose-1000 mb-2">
 								Please connect
 								to your
 								wallet!!!&ensp;
 							</p>
+							
 						</div>
+						
 					)}
-				</div>
+			
 				<div className="flex flex-col md:flex-row space-x-3">
 					{isConnected ? (
 						<div>
@@ -51,11 +57,11 @@ const Header = () => {
 							<div>
 								<span>
 									<strong className="text-1xl font-easport !font-bold text-rose-2000 mb-2">
-										{Number.parseFloat(
+										{(Number.parseFloat(
 											data
 										) /
 											10 **
-												8}{" "}
+												8).toLocaleString('en-US')}{" "}
 										&ensp;SFS
 									</strong>
 								</span>

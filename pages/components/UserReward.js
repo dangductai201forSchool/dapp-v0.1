@@ -18,14 +18,14 @@ const UserReward = () => {
             <div className='border-[5px] border-rose-3000 p-3 md:px-8 rounded-2xl w-full md:w-auto md:mr-11'>
                 <div className='balance-reward-div'>
                     <div className='your-current-reward-div'>
-                        <h3 className='text-3xl font-easport !font-bold text-rose-3000 mb-2'>
+                        <h2 className='text-3xl font-easport !font-bold text-rose-3000 mb-2'>
                             Your current reward
 
-                        </h3>
-                        <p>
-                            <strong className='text-rose-3000 font-tommy-bold text-3xl'>
-                                {Number.parseFloat(data) / (10 ** 8)}                </strong>
-                            <p className='SFS-symbol text-rose-3000 font-tommy-bold'>SFS</p>
+                        </h2>
+                        <p className="inline-block">
+                            <strong className='text-rose-3000 font-easport text-3xl'>
+                                {(Number.parseFloat(data) / (10 ** 8)).toLocaleString('en-US')}                </strong>
+                            <p className='SFS-symbol text-rose-3000 font-easport'>SFS</p>
 
                         </p>
                     </div>

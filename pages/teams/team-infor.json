@@ -1,4 +1,8 @@
 {
+    "default1": {
+        "name": "Team-1",
+        "logo-url": "./logo-crop.png"
+    },
     "liverpool": {
         "name": "Liverpool",
         "logo-url": "https://brandlogos.net/wp-content/uploads/2011/08/liverpool-logo-vector-400x400.png"

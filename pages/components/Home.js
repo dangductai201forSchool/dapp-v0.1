@@ -34,6 +34,7 @@ const Home = () => {
 						Busd reward
 					</p>
 				</div>
+				
 				<div className="about-buynow">
 					<img src="\logo.png"></img>
 					<div className="home-buynow-btn-div">

@@ -3,8 +3,6 @@ import { useState } from 'react';
 
 import { BigNumber, utils } from 'ethers';
 
-import SideBarTop from './SideBarTop';
-import SideBarFooter from './SideBarFooter';
 import Header from './Header';
 import Home from './Home';
 import NFTCard from './NFTCard';
@@ -12,8 +10,22 @@ import PredictionNow from './PredictionNow';
 
 export default function Container() {
     const [dashboardClicked, setDashboardClicked] = useState(1);
+    const [isLeftMenuDisplay,setIsLeftMenuDisplay] = useState(false);
 
     const Dashboard = () => {
+        const SideBarTop = () => {
+            return (
+                <div className='sidebar__top md:p-3 text-center'>
+                    <span className='box--logo max-w-[120px] hidden md:inline-block'>
+                        <img className='img--logo' src="/logo.png"></img>
+                    </span>
+                    <span className='block text-left pt-3 pl-6 md:hidden' onClick ={() => setIsLeftMenuDisplay(false)}>
+                        <i className='las la-times text-rose-3000 text-2xl'></i>
+                    </span>
+                </div>
+            );
+        }
+        
         const SideBarContent = () => {
             return (
                 <div className='sidebar__content mt-3 ml-3 mb-4'>
@@ -62,10 +74,56 @@ export default function Container() {
                 </div>
             );
         }
+        const SideBarFooter = () => {
+            return (
+                <div className='sidebar--footer bg-primary-pink-5000 round-social '>
+                    <div className='socials--box'>
+                        <ul className='socials--list flex space-x-3 px-3 py-2.5'>
+                        <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
+                                <a target="_blank" rel="noreferrer" href="http://localhost/sport/">
+                                    <span>
+                                        <i className='las la-globe text-2xl'>
+        
+                                        </i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
+                                <a target="_blank" rel="noreferrer" href="https://twitter.com/Sportfts?s=20&t=cm-wlDSN34lL5I29LjlJMA">
+                                    <span>
+                                        <i className='lab la-twitter text-2xl'>
+        
+                                        </i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
+                                <a target="_blank" rel="noreferrer" href="https://t.me/sportfantasyp2e">
+                                    <span>
+                                        <i className='lab la-telegram text-2xl'>
+        
+                                        </i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
+                                <a target="_blank" rel="noreferrer" href="https://pancakeswap.finance/">
+                                    <span>
+                                        <i className='las la-dollar-sign text-2xl'>
+        
+                                        </i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            );
+        }
 
         return (
-            <div className='DAO__main-left min-w-[240px] w-[240px] md:block fixed md:static top-0 z-[999] right-0 h-screen hidden md:h-auto shadow-[0_0_10px_3px_#e293ae] md:shadow-none bg-[#fff] md:bg-transparent transition-all'>
-                <div className='DAO__sidebar border-rose-3000 border-[5px] bg-primary-white-1000 rounded-2xl relative'>
+            <div className= {isLeftMenuDisplay?('DAO__main-left min-w-[240px] w-[240px] md:block fixed md:static top-0 z-[999] right-0 h-screen md:h-auto shadow-[0_0_10px_3px_#e293ae] md:shadow-none bg-[#fff] md:bg-transparent transition-all'):('DAO__main-left min-w-[240px] w-[240px] md:block fixed md:static top-0 z-[999] right-0 hidden h-screen md:h-auto shadow-[0_0_10px_3px_#e293ae] md:shadow-none bg-[#fff] md:bg-transparent transition-all')}>
+                <div className='DAO__sidebar  bg-primary-white-1000 rounded-2xl relative'>
                     <SideBarTop></SideBarTop>
                     <SideBarContent></SideBarContent>
                     <SideBarFooter></SideBarFooter>
@@ -76,10 +134,21 @@ export default function Container() {
     }
 
     const WapperMain = () => {
+        
+        const LeftMenuButton =() =>{
+            return (
+                <div className="menu-nav fixed top-0 right-0 md:hidden navbar-toggler-div" onClick ={() => setIsLeftMenuDisplay(true)}>
+                    <img src="/menu.png" alt="" class="navbar-toggler"/>
+                </div>
+            );
+        }
+
+
         const Content = () => {
             const { chains, error, isLoading, pendingChainId, switchNetwork } =useSwitchNetwork()
             return (
                 <div className='DAO__content'>
+                    
                     {(dashboardClicked === 1 || isLoading) ? (<Home></Home>)
                         : (
                             dashboardClicked === 2 ? (
@@ -94,6 +163,7 @@ export default function Container() {
 
         return (<div className='DAO__main-center flex-grow'>
             <div id='DAO__wrapper-main' className='DAO__wrapper-main bg-primary-white-1000 rounded-2xl border-rose-3000 border-[5px]'>
+                <LeftMenuButton></LeftMenuButton>
                 <Header></Header>
                 <Content></Content>
             </div>
