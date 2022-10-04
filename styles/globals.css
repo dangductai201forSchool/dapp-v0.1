@@ -24746,8 +24746,7 @@ strong {
 	border-color: hsla(0, 0%, 100%, 0.08);
 }
 #main-wrapper.home {
-	min-height:1800px;
-	height: 100vh;
+	height:auto;
 }
 html {
 	scrollbar-color: #f5f5f5 #ab033e;
@@ -26203,6 +26202,13 @@ div.border-rose-3000.p-3 {
 }
 
 @media screen and (max-width: 480px) {
+	#main-wrapper.home {
+		height: 100%;
+		height: -moz-available;          /* WebKit-based browsers will ignore this. */
+		height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+		height: fill-available;
+	}
+	
 	.wallet-address {
 		width: 300px;
 		overflow-wrap:break-word;
