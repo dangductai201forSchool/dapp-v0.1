@@ -138,7 +138,7 @@ export default function Container() {
         const LeftMenuButton =() =>{
             return (
                 <div className="menu-nav fixed top-0 right-0 md:hidden navbar-toggler-div" onClick ={() => setIsLeftMenuDisplay(true)}>
-                    <img src="/menu.png" alt="" class="navbar-toggler"/>
+                    <img src="/menu.png" alt="" className="navbar-toggler"/>
                 </div>
             );
         }

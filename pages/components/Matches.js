@@ -16,7 +16,7 @@ const Matches = () => {
             functionName: 'getCurrentMatches'
         });
 
-        const isMatchStarted = (matchId) => {
+        const IsMatchStarted = (matchId) => {
             const { data, error, isLoading } = useContractRead({
                 addressOrName: predictionGameAddr,
                 contractInterface: predictionGameABI,
@@ -27,7 +27,7 @@ const Matches = () => {
             return data;
         }
 
-        const isEnounghSFS = () => {
+        const IsEnounghSFS = () => {
             const { data, error, isLoading } = useContractRead({
                 addressOrName: predictionGameAddr,
                 contractInterface: predictionGameABI,
@@ -38,18 +38,8 @@ const Matches = () => {
             return data;
         }
 
-        const isMatchEnded = (matchId) => {
-            const { data, error, isLoading } = useContractRead({
-                addressOrName: predictionGameAddr,
-                contractInterface: predictionGameABI,
-                functionName: 'isMatchEnded',
-                args: matchId,
-            });
 
-            return data;
-        }
-
-        const isPredicted = (matchId) => {
+        const IsPredicted = (matchId) => {
             const { data, error, isLoading } = useContractRead({
                 addressOrName: predictionGameAddr,
                 contractInterface: predictionGameABI,
@@ -83,15 +73,15 @@ const Matches = () => {
         return data == null?(<div></div>):(
             data.slice().sort((a,b) => Number.parseInt(b.matchId) - Number.parseInt(a.matchId)).map((dt) => {
                 const matchId = Number.parseInt(dt.matchId);
-                const isStarted = isMatchStarted(matchId);
+                const isStarted = IsMatchStarted(matchId);
                 const stTeam = teams[dt.stTeam]['name']==null?(dt.stTeam):(teams[dt.stTeam]['name']);
                 const ndTeam = teams[dt.ndTeam]['name']==null?(dt.ndTeam):(teams[dt.ndTeam]['name']);
                 const stTeamLogo = teams[dt.stTeam]['logo-url']==null?(teams['default1']['logo-url']):(teams[dt.stTeam]['logo-url']);
                 const ndTeamLogo = teams[dt.ndTeam]['logo-url']==null?(teams['default1']['logo-url']):(teams[dt.ndTeam]['logo-url']);
                 const startTime =  (new Date(Number.parseInt(dt.startTime) * 1000)).toLocaleString('en-US', { timeZone: "UTC" });
-                const isUserPredicted = isPredicted(matchId); 
+                const isUserPredicted = IsPredicted(matchId); 
                 return (                    
-            <li className= {isStarted?'match-item-started ':'match__item'}>
+            <li className= {isStarted?'match-item-started ':'match__item'} key={matchId}>
                 <a target="_self" className='item--link font-easport w-full block py-2 text-white'>
                     <div className="match-id-div"><p className="font-easport">Match Id: {matchId}</p></div>
                     <div className="item-content">
@@ -109,7 +99,7 @@ const Matches = () => {
                     
                     </div>
                 </a>
-                {isEnounghSFS()?(
+                {IsEnounghSFS()?(
                         isStarted?(
                             <div className="match-time-start"><p className="font-easport">Match has started already!!!</p></div>
                         ):(
