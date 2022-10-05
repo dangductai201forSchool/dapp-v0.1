@@ -7,8 +7,17 @@ import Header from './Header';
 import Home from './Home';
 import NFTCard from './NFTCard';
 import PredictionNow from './PredictionNow';
+import config from "../contracts/config.json";
+
 
 export default function Container() {
+    let faucet = config['faucet'];
+    let docs = config['docs'];
+    let community = config['community'];
+    let website = config['website'];
+    let twiter = config['twiter'];
+    let pancake = config['pancake'];
+    
     const [dashboardClicked, setDashboardClicked] = useState(1);
     const [isLeftMenuDisplay,setIsLeftMenuDisplay] = useState(false);
 
@@ -53,21 +62,20 @@ export default function Container() {
                         </li>
                         <li className='sidebar__item-nav rounded-tl-3xl rounded-bl-3xl false hover:bg-gradient-to-r from-[#ab033e] to-[#ffffff] cursor-pointer'>
 
-                            <a target="_blank" className='item--link font-easport w-full block py-2 pl-3 text-rose-2000' href="/"
-                            >
+                            <a target="_blank" rel="noreferrer" href={docs} className='item--link font-easport w-full block py-2 pl-3 text-rose-2000'>
                                 Docs
                             </a>
                         </li>
                         <li className='sidebar__item-nav rounded-tl-3xl rounded-bl-3xl false hover:bg-gradient-to-r from-[#ab033e] to-[#ffffff] cursor-pointer'>
 
-                            <a target="_blank" className='item--link font-easport w-full block py-2 pl-3 text-rose-2000' href="/">
+                            <a target="_blank" rel="noreferrer" href={community} className='item--link font-easport w-full block py-2 pl-3 text-rose-2000'>
                                 Community
                             </a>
                         </li>
 
                         <li className='sidebar__item-nav rounded-tl-3xl rounded-bl-3xl false hover:bg-gradient-to-r from-[#ab033e] to-[#ffffff] cursor-pointer'>
 
-                            <a target="_blank" className='item--link font-easport w-full block py-2 pl-3 text-rose-2000' href="/">
+                            <a target="_blank" rel="noreferrer" href={faucet}  className='item--link font-easport w-full block py-2 pl-3 text-rose-2000' >
                                 Get 1000 SFS (Testnet)
                             </a>
                         </li>
@@ -81,7 +89,7 @@ export default function Container() {
                     <div className='socials--box'>
                         <ul className='socials--list flex space-x-3 px-3 py-2.5'>
                         <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
-                                <a target="_blank" rel="noreferrer" href="http://localhost/sport/">
+                                <a target="_blank" rel="noreferrer" href={website}>
                                     <span>
                                         <i className='las la-globe text-2xl'>
         
@@ -90,7 +98,7 @@ export default function Container() {
                                 </a>
                             </li>
                             <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
-                                <a target="_blank" rel="noreferrer" href="https://twitter.com/Sportfts?s=20&t=cm-wlDSN34lL5I29LjlJMA">
+                                <a target="_blank" rel="noreferrer" href={twiter}>
                                     <span>
                                         <i className='lab la-twitter text-2xl'>
         
@@ -99,7 +107,7 @@ export default function Container() {
                                 </a>
                             </li>
                             <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
-                                <a target="_blank" rel="noreferrer" href="https://t.me/sportfantasyp2e">
+                                <a target="_blank" rel="noreferrer" href={community}>
                                     <span>
                                         <i className='lab la-telegram text-2xl'>
         
@@ -108,7 +116,7 @@ export default function Container() {
                                 </a>
                             </li>
                             <li className='social--item bg-primary-white-1000 rounded-full px-2 py-1'>
-                                <a target="_blank" rel="noreferrer" href="https://pancakeswap.finance/">
+                                <a target="_blank" rel="noreferrer" href={pancake}>
                                     <span>
                                         <i className='las la-dollar-sign text-2xl'>
         

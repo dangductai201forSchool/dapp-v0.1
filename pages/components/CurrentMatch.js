@@ -1,10 +1,19 @@
-import { useAccount, useContractRead, usePrepareContractWrite, useContractWrite } from 'wagmi'
-import predictionGameABI from '../contracts/PredictionGame_abi.json';
-const predictionGameAddr = '0xA49c5cD7200303c410A1E4656503688D490Ffa60';
+import { useNetwork, useAccount, useContractRead, usePrepareContractWrite, useContractWrite } from 'wagmi'
+import config from "../contracts/config.json";
 import teams from '../teams/team-infor.json';
+import predictionGameABI from '../contracts/prediction_game_abi.json';
+
 
 
 const CurrentMatch = (props) => {
+    const { chain, chains } = useNetwork();
+    let predictionGameAddr = config['sfs-mainnet']['prediction-game-address'];
+    
+    if(chain !=null &&chain.network == 'bsc testnet'){
+        predictionGameAddr = config['sfs-testnet']['prediction-game-address'];
+    }
+
+
     const { address, isConnected } = useAccount();
     //function
     const TeamName = (name) => {

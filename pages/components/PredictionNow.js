@@ -3,9 +3,22 @@ import UserReward from "./UserReward";
 import { useState } from 'react';
 import CurrentMatches from "./CurrentMatches";
 import EndingMatches from "./EndingMatches";
+import config from "../contracts/config.json";
+import {useNetwork} from "wagmi";
+
+
 
 
 const PredictionNow = () => {
+    const { chain, chains } = useNetwork();
+    let sfsAddr =config['sfs-mainnet']['token-address'];
+    let sfsBsc ='https://bscscan.com/address/'+sfsAddr; 
+    let sfsStr= sfsAddr;
+    if(chain !=null &&chain.network == 'bsc testnet'){
+        sfsAddr = config['sfs-testnet']['token-address'];
+        sfsStr = sfsAddr+' (Testnet)';
+        sfsBsc ='https://testnet.bscscan.com/address/'+sfsAddr;
+    }
     //child component
     const Block1 = () => {
         return (<div className='page__title mx-4 mt-2 lg:mx-11'>
@@ -67,8 +80,11 @@ const PredictionNow = () => {
         return (
             <div className='mx-4 lg:mx-11 mt-8 mb-3 overflow-auto'>
                 <h3 className='mb-5 text-rose-3000 text-2xl font-easport uppercase'>
-                    Predict now and earn reward
+                    Predict now and earn reward 
                 </h3>
+                <a target ="_blank" rel="noreferrer" href ={sfsBsc} className='mb-5 contract-text text-1xl font-easport uppercase'>
+                    Contract: {sfsStr} 
+                </a>
                 <div className='DAO__table bg-rose-5000 rounded-2xl p-3 mb-7 TableTopStaker_wrapperTable__zPrbO'>
                     <div className='match-list'>
                         <CurrentMatchesButton></CurrentMatchesButton>

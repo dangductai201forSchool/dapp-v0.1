@@ -1,4 +1,8 @@
+import config from "../contracts/config.json";
+
 const Home = () => {
+	let docs=config['docs'];
+
 	const Welcome = () =>{
 		return (
 			<div className="welcome-text text-center">
@@ -28,7 +32,8 @@ const Home = () => {
 					<br></br>
 					<i className="playingpredictiongame-item las la-angle-double-right"></i>
 					<p className="playingpredictiongame-item about-content-list font-easport">
-						playing prediction game
+						playing prediction game (verified & audited contract)
+						<a target ="_blank" rel="noreferrer" href={docs}>  seeMore...</a>
 					</p>
 					<br></br>
 					<i className="buynftcardgame-item las la-angle-double-right"></i>

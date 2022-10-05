@@ -1,0 +1,16 @@
+{
+    "sfs-testnet":{
+        "token-address":"0x74cA4408af615cC95cc2aA9a80071e8694A0dC9D",
+        "prediction-game-address":"0xA49c5cD7200303c410A1E4656503688D490Ffa60"
+    },
+    "sfs-mainnet":{
+        "token-address":"0x74cA4408af615cC95cc2aA9a80071e8694A0dC9D",
+        "prediction-game-address":"0xA49c5cD7200303c410A1E4656503688D490Ffa60"
+    },
+    "docs":"/",
+    "faucet":"/",
+    "community": "https://t.me/sportfantasyp2e",
+    "website":"https://sportfantasy.io",
+    "twiter": "https://twitter.com/Sportfts",
+    "pancake":"https://pancakeswap.finance/swap"
+}

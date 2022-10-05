@@ -1,9 +1,16 @@
-import {useAccount, useContractRead} from "wagmi";
-import sfsABI from "../contracts/SFS_abi.json";
-const sfsTestnetAddr = "0x74cA4408af615cC95cc2aA9a80071e8694A0dC9D";
+import {useNetwork, useAccount, useContractRead} from "wagmi";
 import {ConnectButton} from "@rainbow-me/rainbowkit";
+import config from "../contracts/config.json";
+import sfsABI from '../contracts/sfs_abi.json';
+
 
 const Header = () => {
+	const { chain, chains } = useNetwork();
+    let sfsTestnetAddr =config['sfs-mainnet']['token-address'];;
+    if(chain !=null &&chain.network == 'bsc testnet'){
+        sfsTestnetAddr = config['sfs-testnet']['token-address'];
+    }
+	
 	const {address, isConnected} = useAccount();
 
 	const {data, error, isLoading} = useContractRead({
