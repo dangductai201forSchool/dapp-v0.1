@@ -1,11 +1,12 @@
 import TotalReward from "./TotalReward";
 import UserReward from "./UserReward";
 import { useState } from 'react';
-import Matches from "./Matches";
-import Endings from "./Endings";
+import CurrentMatches from "./CurrentMatches";
+import EndingMatches from "./EndingMatches";
 
 
 const PredictionNow = () => {
+    //child component
     const Block1 = () => {
         return (<div className='page__title mx-4 mt-2 lg:mx-11'>
             <h2 className='text-rose-3000 text-xl font-tommy-medium'>
@@ -41,9 +42,9 @@ const PredictionNow = () => {
     }
 
 
-    const Prediction = () => {
+    const PredictionContent = () => {
         const [isEndedClick, setIsEndedClick] = useState(false);
-        const MatchesButton = () => {
+        const CurrentMatchesButton = () => {
            return(
             <div className='predict-match-btn-div bg-rose-5000'>
             <button onClick={() => setIsEndedClick(false)} target="_self" className={isEndedClick ? 'predict-match-btn' : 'predict-match-btn-target'}>
@@ -53,7 +54,7 @@ const PredictionNow = () => {
            );
         }
 
-        const EndingsButton = () => {
+        const EndingMatchesButton = () => {
             return(
                 <div className='predict-match-btn-div bg-rose-5000'>
                 <button onClick={() => setIsEndedClick(true)} target="_self" className={isEndedClick ? 'predict-match-btn-target' : 'predict-match-btn'}>
@@ -70,11 +71,11 @@ const PredictionNow = () => {
                 </h3>
                 <div className='DAO__table bg-rose-5000 rounded-2xl p-3 mb-7 TableTopStaker_wrapperTable__zPrbO'>
                     <div className='match-list'>
-                        <MatchesButton></MatchesButton>
-                        <EndingsButton></EndingsButton>
+                        <CurrentMatchesButton></CurrentMatchesButton>
+                        <EndingMatchesButton></EndingMatchesButton>
                         {isEndedClick ? (
-                            <Endings></Endings>
-                        ) : (<Matches></Matches>)}
+                            <EndingMatches></EndingMatches>
+                        ) : (<CurrentMatches></CurrentMatches>)}
                     </div>
                 </div>
             </div>
@@ -87,7 +88,7 @@ const PredictionNow = () => {
             <TotalReward></TotalReward>
             <Block2></Block2>
             <UserReward></UserReward>
-            <Prediction></Prediction>
+            <PredictionContent></PredictionContent>
         </div>
     );
 }

@@ -12,6 +12,7 @@ export default function Container() {
     const [dashboardClicked, setDashboardClicked] = useState(1);
     const [isLeftMenuDisplay,setIsLeftMenuDisplay] = useState(false);
 
+    //child component
     const Dashboard = () => {
         const SideBarTop = () => {
             return (
