@@ -7,12 +7,12 @@ export default function Home() {
   return (
     <div id ='main-wrapper' className='DAO__main-wrapper bg-primary-pink-3000 home'>
       <Head>
-        <title>RainbowKit Demo</title>
+        <title>SportFantasy</title>
         <meta
-          name="description"
-          content="Demo app part of a tutorial on adding RainbowKit to a React application"
+          name="SportFantasy"
+          content="Play prediction game to earn and buying NFT card game"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./logo-crop.png" />
       </Head>
       <Container></Container>
     </div>
