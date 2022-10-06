@@ -24587,6 +24587,10 @@ b,
 strong {
 	color: #6a707e;
 }
+.DAO__sidebar {
+	background-color:#055757;
+}
+
 .DAO__sidebar .sidebar__item-nav:hover a {
 	color: #fff !important;
 }
@@ -26279,7 +26283,7 @@ div.border-rose-3000.p-3 {
 	vertical-align: middle;
 	width:100vw;
 	height:4vh;
-	background-color: #055757; 
+	background-color: #000000; 
 }
 
 .contract-text{
@@ -26289,4 +26293,8 @@ div.border-rose-3000.p-3 {
 .prediction-alert {
 	text-align:center;
 	color: red;
+}
+
+.DAO__main-left {
+	background-color: rgba(255,255,255,0);
 }

@@ -131,8 +131,8 @@ export default function Container() {
         }
 
         return (
-            <div className= {isLeftMenuDisplay?('DAO__main-left min-w-[240px] w-[240px] md:block fixed md:static top-0 z-[999] right-0 h-screen md:h-auto shadow-[0_0_10px_3px_#e293ae] md:shadow-none bg-[#fff] md:bg-transparent transition-all'):('DAO__main-left min-w-[240px] w-[240px] md:block fixed md:static top-0 z-[999] right-0 hidden h-screen md:h-auto shadow-[0_0_10px_3px_#e293ae] md:shadow-none bg-[#fff] md:bg-transparent transition-all')}>
-                <div className='DAO__sidebar  bg-primary-white-1000 rounded-2xl relative'>
+            <div className= {isLeftMenuDisplay?('DAO__main-left min-w-[240px] w-[240px] md:block fixed md:static top-0 z-[999] right-0 h-screen md:h-auto md:shadow-none bg-[#fff] md:bg-transparent transition-all'):('DAO__main-left min-w-[240px] w-[240px] md:block fixed md:static top-0 z-[999] right-0 hidden h-screen md:h-auto shadow-[0_0_10px_3px_#e293ae] md:shadow-none bg-[#fff] md:bg-transparent transition-all')}>
+                <div className='DAO__sidebar rounded-2xl relative'>
                     <SideBarTop></SideBarTop>
                     <SideBarContent></SideBarContent>
                     <SideBarFooter></SideBarFooter>
