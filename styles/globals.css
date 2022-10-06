@@ -24746,7 +24746,9 @@ strong {
 	border-color: hsla(0, 0%, 100%, 0.08);
 }
 #main-wrapper.home {
-	height:auto;
+	height: -moz-available;
+	height: -webkit-fill-available;
+	min-height:100vh;
 }
 html {
 	scrollbar-color: #f5f5f5 #ab033e;
@@ -26204,12 +26206,12 @@ div.border-rose-3000.p-3 {
 
 
 @media screen and (max-width: 500px) {
-	#main-wrapper.home {
-		height: 100%;
-		height: -moz-available;          /* WebKit-based browsers will ignore this. */
-		height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-		height: fill-available;
-	}
+	/* #main-wrapper.home {
+		height: 100vh;
+		height: -moz-available;          
+		height: -webkit-fill-available;
+		overflow:auto;
+	} */
 
 	.contract-text-div {
 		display: inline-block;
@@ -26255,7 +26257,7 @@ div.border-rose-3000.p-3 {
 	}
 }
 
-@media screen and (max-width: 386px) {
+@media screen and (max-width: 391px) {
 	.predict-btn {
 		width:15%;
 		

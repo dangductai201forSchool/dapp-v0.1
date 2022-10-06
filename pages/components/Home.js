@@ -33,7 +33,7 @@ const Home = () => {
 					<i className="playingpredictiongame-item las la-angle-double-right"></i>
 					<p className="playingpredictiongame-item about-content-list font-easport">
 						playing prediction game (verified & audited contract)
-						<a target ="_blank" rel="noreferrer" href={docs}>  seeMore...</a>
+						<a target ="_blank" rel="noreferrer" href={docs}>  see more...</a>
 					</p>
 					<br></br>
 					<i className="buynftcardgame-item las la-angle-double-right"></i>
