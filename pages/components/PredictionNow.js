@@ -11,11 +11,11 @@ import {useNetwork} from "wagmi";
 
 const PredictionNow = () => {
     const { chain, chains } = useNetwork();
-    let sfsAddr =config['sfs-mainnet']['token-address'];
+    let sfsAddr =config['sfs-mainnet']['prediction-game-address'];
     let sfsBsc ='https://bscscan.com/address/'+sfsAddr; 
     let sfsStr= sfsAddr;
     if(chain !=null &&chain.network == 'bsc testnet'){
-        sfsAddr = config['sfs-testnet']['token-address'];
+        sfsAddr = config['sfs-testnet']['prediction-game-address'];
         sfsStr = sfsAddr+' (Testnet)';
         sfsBsc ='https://testnet.bscscan.com/address/'+sfsAddr;
     }
