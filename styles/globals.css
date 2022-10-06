@@ -26201,19 +26201,31 @@ div.border-rose-3000.p-3 {
   background: rgb(3, 7, 76);
 }
 
-@media screen and (max-width: 480px) {
+
+
+@media screen and (max-width: 500px) {
 	#main-wrapper.home {
 		height: 100%;
 		height: -moz-available;          /* WebKit-based browsers will ignore this. */
 		height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
 		height: fill-available;
 	}
-	
-	.wallet-address {
-		width: 300px;
-		overflow-wrap:break-word;
+
+	.contract-text-div {
+		display: inline-block;
+		overflow-wrap: break-word;
+		width:80%;
+	}
+
+	.contract-text {
+		font-size:0.7rem;
 	}
 	
+	.wallet-address {
+		width:300px;
+		overflow-wrap:break-word;
+	}
+
 	.about-text {
 		width:100%;
 	}
@@ -26221,7 +26233,6 @@ div.border-rose-3000.p-3 {
 		width:100%;
 	}
 
-	
 	.about-buynow > img {
 		padding:2rem 0 0 0 !important;
 	}
@@ -26232,6 +26243,8 @@ div.border-rose-3000.p-3 {
 
 	.reward-formula {
 		text-align: left;
+		overflow-wrap: break-word;
+		width:60%;
 	}
 
 	.predict-btn {
@@ -26248,6 +26261,10 @@ div.border-rose-3000.p-3 {
 		
 		font-size:0.25rem;
 		overflow-wrap:break-word;
+	}
+
+	.contract-text {
+		font-size:0.6rem;
 	}
 }
 

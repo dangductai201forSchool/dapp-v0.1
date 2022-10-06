@@ -82,9 +82,9 @@ const PredictionNow = () => {
                 <h3 className='mb-5 text-rose-3000 text-2xl font-easport uppercase'>
                     Predict now and earn reward 
                 </h3>
-                <a target ="_blank" rel="noreferrer" href ={sfsBsc} className='mb-5 contract-text text-1xl font-easport uppercase'>
-                    Contract: {sfsStr} 
-                </a>
+                <div className = "contract-text-div mb-5"><a target ="_blank" rel="noreferrer" href ={sfsBsc} >
+                    <span className='contract-text text-1xl font-easport'>Contract: {sfsStr}</span>
+                </a></div>
                 <div className='DAO__table bg-rose-5000 rounded-2xl p-3 mb-7 TableTopStaker_wrapperTable__zPrbO'>
                     <div className='match-list'>
                         <CurrentMatchesButton></CurrentMatchesButton>
