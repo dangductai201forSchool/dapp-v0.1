@@ -97,16 +97,16 @@ const CurrentMatch = (props) => {
                     );
                 } else {
                     return (
-                        <div className="match-time-start"><p className="font-easport">Predicted already</p></div>
+                        <div className="match-time-start"><p className="prediction-alert font-easport">Predicted already</p></div>
                     );
                 }
             } else {
                 return (
-                    <div className="match-time-start"><p className="font-easport">Match has started already!!!</p></div>
+                    <div className="match-time-start"><p className="prediction-alert font-easport">Match has started already!!!</p></div>
                 );
             }
         } else {
-            return (<div className="match-time-start"><p className="font-easport">You must hold atleast 600 SFS to predict!!!</p></div>);
+            return (<div className="match-time-start"><p className="prediction-alert font-easport">You must hold atleast 600 SFS to predict!!!</p></div>);
         }
     }
     // component

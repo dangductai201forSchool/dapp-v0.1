@@ -26276,10 +26276,17 @@ div.border-rose-3000.p-3 {
 }
 
 .navbar-toggler-div{
+	vertical-align: middle;
 	width:100vw;
-	background-color: #ffffff; 
+	height:4vh;
+	background-color: #055757; 
 }
 
 .contract-text{
 	color: #031ae6;
+}
+
+.prediction-alert {
+	text-align:center;
+	color: red;
 }
