@@ -24746,8 +24746,7 @@ strong {
 	border-color: hsla(0, 0%, 100%, 0.08);
 }
 #main-wrapper.home {
-	height: -moz-available;
-	height: -webkit-fill-available;
+	height: auto;
 	min-height:100vh;
 }
 html {
@@ -26277,7 +26276,6 @@ div.border-rose-3000.p-3 {
 }
 
 .navbar-toggler-div{
-	
 	width:100vw;
 	background-color: #ffffff; 
 }
