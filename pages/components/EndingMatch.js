@@ -32,7 +32,7 @@ const EndingMatch = (props) => {
             addressOrName: predictionGameAddr,
             contractInterface: predictionGameABI,
             functionName: 'isClaimAble',
-            args: address,
+            args: [matchId,address],
         });
         return data;
     }
