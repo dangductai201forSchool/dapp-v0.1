@@ -1,132 +1,83 @@
-import { useNetwork, useAccount, useContractRead,usePrepareContractWrite,useContractWrite } from 'wagmi'
+import {usePrepareContractWrite,useContractWrite } from 'wagmi'
 import teams from '../teams/team-infor.json';
 import config from "../contracts/config.json";
-import predictionGameABI from '../contracts/prediction_game_abi.json';
+import usePredictionAddress from './usePredictionAddress';
+import useClaimAble from './useIsClaimAble';
 
 
-
-const EndingMatch = (props) => {
-    const { chain, chains } = useNetwork();
-    let predictionGameAddr = config['sfs-mainnet']['prediction-game-address'];
+const EndingMatch = ({matchId,stTeam,ndTeam,startTime,result}) => {
+    const isClaimAble = useClaimAble(matchId);
     
-    if(chain !=null &&chain.network == 'bsc testnet'){
-        predictionGameAddr = config['sfs-testnet']['prediction-game-address'];
-    }
-    const { address, isConnected } = useAccount();
-    //function
-    const TeamName = (name) => {
-        return (
-            teams[name] == null ? (name) : (teams[name]['name'])
-        );
-    }
-    const TeamLogo = (name) => {
-        return (
-            teams[name] == null ? (teams['default1']['logo-url']) : (teams[name]['logo-url'])
-        );
-    }
-    const StartTime = (unix) => {
-        return (new Date(Number.parseInt(unix) * 1000)).toLocaleString('en-US', { timeZone: "UTC" });
-    }
-    const IsClaimAble = (matchId) => {
-        const { data, error, isLoading } = useContractRead({
-            addressOrName: predictionGameAddr,
-            contractInterface: predictionGameABI,
-            functionName: 'isClaimAble',
-            args: [matchId,address],
-        });
-        return data;
-    }
-
-    //child component
-    const MatchInfo = (props)=> {
+    const MatchInfo = ({matchId,result,stTeam,ndTeam,startTime})=> {
         return (
             <a target="_self" className='item--link font-easport w-full block py-2 text-white'>
-                <div className="match-id-div"><p className="font-easport">Match Id: {props.matchId}</p></div>
+                <div className="match-id-div"><p className="font-easport">Match Id: {Number.parseInt(matchId)}</p></div>
                 <div className="item-content">
-                    <div className={props.result === 1 ? "team-card-win" : "team-card"}>
-                        <p className="font-easport team-name"> {props.stTeamName}</p>
-                        <img className="team-img" src={props.stTeamLogo}></img>
-                        <div className="team-result-div"><p className={props.result === 1 ? "team-result-text-win" : "team-result-text-lose"}>
-                            {props.result == 1 && 'Win'}
-                            {props.result == 2 && 'Lose'}
-                            {props.result == 3 && 'Draw'}
+                    <div className={result === 1 ? "team-card-win" : "team-card"}>
+                        <p className="font-easport team-name"> {teams[stTeam] == null ? (stTeam) : (teams[stTeam]['name'])}</p>
+                        <img className="team-img" src={teams[stTeam] == null ? (teams['default1']['logo-url']) : (teams[stTeam]['logo-url'])}></img>
+                        <div className="team-result-div"><p className={result === 1 ? "team-result-text-win" : "team-result-text-lose"}>
+                            {result == 1 && 'Win'}
+                            {result == 2 && 'Lose'}
+                            {result == 3 && 'Draw'}
                         </p></div>
                     </div>
                     <div className="vs-card"><p className="font-easport">vs</p></div>
 
-                    <div className={props.result === 2 ? "team-card-win" : "team-card"}><p className="font-easport team-name">{props.ndTeamName}</p>
-                        <img className="team-img" src={props.ndTeamLogo}></img>
-                        <div className="team-result-div"><p className={props.result === 2 ? "team-result-text-win" : "team-result-text-lose"}>
-                            {props.result == 1 && 'Lose'}
-                            {props.result == 2 && 'Win'}
-                            {props.result == 3 && 'Draw'}
+                    <div className={result === 2 ? "team-card-win" : "team-card"}>
+                        <p className="font-easport team-name">{teams[ndTeam] == null ? (ndTeam) : (teams[ndTeam]['name'])}</p>
+                        <img className="team-img" src={teams[ndTeam] == null ? (teams['default1']['logo-url']) : (teams[ndTeam]['logo-url'])}></img>
+                        <div className="team-result-div"><p className={result === 2 ? "team-result-text-win" : "team-result-text-lose"}>
+                            {result == 1 && 'Lose'}
+                            {result == 2 && 'Win'}
+                            {result == 3 && 'Draw'}
                         </p></div>
                     </div>
                     <div className="match-time-start">
-                        <p className="font-easport">{props.startTime} (UTC)</p>
+                        <p className="font-easport">{(new Date(Number.parseInt(startTime) * 1000)).toLocaleString('en-US', { timeZone: "UTC" })} (UTC)</p>
                     </div>
-                    {props.isClaimAble && <ClaimDiv matchId={props.matchId}></ClaimDiv>}
                 </div>
 
             </a>
         );
     }
-    const ClaimDiv = (props) => {
-        const ClaimButton = (props) => {
-            const { config } = usePrepareContractWrite({
-                addressOrName: predictionGameAddr,
-                contractInterface: predictionGameABI,
-                functionName: 'claimReward',
-                args: [props.matchId],
-            });
+    const ClaimButton = ({matchId}) => {
+        const predictionGameAddr = usePredictionAddress();
+        const { config } = usePrepareContractWrite({
+            addressOrName: predictionGameAddr,
+            contractInterface: predictionGameABI,
+            functionName: 'claimReward',
+            args: [matchId],
+        });
 
-            const { data, isLoading, isSuccess, write } = useContractWrite(config);
-
-            return (
-                <button className='claim-btn' onClick={() => write()}>
-                {isLoading ? 'Claiming...' : (
-                    isSuccess ? 'Claimed' : 'Claim')}
-               </button>
-            );
-        }
+        const { data, isLoading, isSuccess, write } = useContractWrite(config);
 
         return (
+            <button className='claim-btn' onClick={() => write()}>
+            {isLoading ? 'Claiming...' : (
+                isSuccess ? 'Claimed' : 'Claim')}
+           </button>
+        );
+    }
+
+    const ClaimDiv = ({matchId}) => {    
+        return (
             <div class="claim-btn-div">
-                <ClaimButton matchId={props.matchId}></ClaimButton>
+                <ClaimButton matchId={pmatchId}></ClaimButton>
             </div>
         );
     }
 
-    if (IsClaimAble(props.matchId)) {
-        return (
-            <li className='match-item-claim-able' key={props.key}>
-                <MatchInfo matchId={props.matchId}
-                result = {Number.parseInt(props.result)}
-                stTeamName={TeamName(props.stTeam)}
-                ndTeamName={TeamName(props.ndTeam)}
-                stTeamLogo={TeamLogo(props.stTeam)}
-                ndTeamLogo={TeamLogo(props.ndTeam)}
-                startTime={StartTime(props.startTime)}
-                isClaimAble={true}>
-                </MatchInfo>
-            </li>
-        );
-    }
-    else {
-        return (
-            <li className='match-item-claim-unable' key={props.key}>
-                <MatchInfo matchId={props.matchId}
-                result = {Number.parseInt(props.result)}
-                stTeamName={TeamName(props.stTeam)}
-                ndTeamName={TeamName(props.ndTeam)}
-                stTeamLogo={TeamLogo(props.stTeam)}
-                ndTeamLogo={TeamLogo(props.ndTeam)}
-                startTime={StartTime(props.startTime)}
-                isClaimAble={false}
-                ></MatchInfo>
-            </li>
-        );
-    }
+    return(
+        <li className={isClaimAble? 'match-item-claim-able':'match-item-claim-unable'}>
+            <MatchInfo matchId={matchId}
+                stTeam={stTeam}
+                ndTeam={ndTeam}
+                startTime={startTime}
+                result={result}></MatchInfo>
+            {isClaimAble && <ClaimDiv matchId={matchId}></ClaimDiv>}
+        </li>
+    );
 }
 
 export default EndingMatch;

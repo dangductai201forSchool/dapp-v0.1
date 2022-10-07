@@ -33,9 +33,7 @@ const UserReward = () => {
                         </h2>
                         <p className="inline-block">
                             <strong className='text-rose-3000 font-easport text-3xl'>
-                                {(Number.parseFloat(data) / (10 ** 8)).toLocaleString('en-US')}                </strong>
-                            <p className='SFS-symbol text-rose-3000 font-easport'>SFS</p>
-
+                                {(Number.parseFloat(data) / (10 ** 8)).toLocaleString('en-US')+' SFS'} </strong>
                         </p>
                     </div>
                 </div>
