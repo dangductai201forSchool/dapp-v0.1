@@ -1,7 +1,7 @@
 {
     "sfs-testnet":{
         "token-address":"0x74cA4408af615cC95cc2aA9a80071e8694A0dC9D",
-        "prediction-game-address":"0x12DF3600f58c63011bbEca95007688660f8e4a38"
+        "prediction-game-address":"0x002050436CA771DC4fbdf4aAa97809cCF003828D"
     },
     "sfs-mainnet":{
         "token-address":"0x74cA4408af615cC95cc2aA9a80071e8694A0dC9D",
