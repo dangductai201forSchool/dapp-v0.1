@@ -24330,7 +24330,7 @@ video {
 	color: #580e28 !important;
 }
 .bg-primary-white-1000 {
-	background-color: rgba(255, 255, 255, 0.8) !important;
+	background-color: rgba(255, 255, 255, 1) !important;
 }
 .bg-primary-white-2000 {
 	background-color: #e9bdcd !important;
@@ -24351,9 +24351,7 @@ video {
 	background-color: #e72e6e !important;
 }
 .bg-primary-pink-3000 {
-	background-image: url("../public/Asset1.png"),
-		url("../public/gradient-bg.png");
-	background-color: rgba(255, 255, 255, 1) !important;
+	background-color:  #055757 !important;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain, cover;
@@ -24588,7 +24586,7 @@ strong {
 	color: #6a707e;
 }
 .DAO__sidebar {
-	background-color:#055757;
+	background-color:#ffffff;
 }
 
 .DAO__sidebar .sidebar__item-nav:hover a {
