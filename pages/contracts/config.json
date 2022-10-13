@@ -5,7 +5,7 @@
     },
     "sfs-mainnet":{
         "token-address":"0x74cA4408af615cC95cc2aA9a80071e8694A0dC9D",
-        "prediction-game-address":"0x12DF3600f58c63011bbEca95007688660f8e4a38"
+        "prediction-game-address":"0x3aA8E3638985b1039AbDa929301771692b8a8116"
     },
     "docs":"https://sports-organization.gitbook.io/sport-fantasy-whitepaper/",
     "faucet":"https://testnet.bscscan.com/address/0x917127959fcb8bd5025c56de1ad089c68cfb8a8e",
