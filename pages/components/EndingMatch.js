@@ -3,6 +3,8 @@ import teams from '../teams/team-infor.json';
 import config from "../contracts/config.json";
 import usePredictionAddress from './usePredictionAddress';
 import useClaimAble from './useIsClaimAble';
+import predictionGameABI from '../contracts/prediction_game_abi.json';
+
 
 
 const EndingMatch = ({matchId,stTeam,ndTeam,startTime,result}) => {
@@ -63,7 +65,7 @@ const EndingMatch = ({matchId,stTeam,ndTeam,startTime,result}) => {
     const ClaimDiv = ({matchId}) => {    
         return (
             <div class="claim-btn-div">
-                <ClaimButton matchId={pmatchId}></ClaimButton>
+                <ClaimButton matchId={matchId}></ClaimButton>
             </div>
         );
     }
