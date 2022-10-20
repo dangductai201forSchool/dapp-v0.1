@@ -76,7 +76,7 @@ export default function Container() {
                         <li className='sidebar__item-nav rounded-tl-3xl rounded-bl-3xl false hover:bg-gradient-to-r from-[#ab033e] to-[#ffffff] cursor-pointer'>
 
                             <a target="_blank" rel="noreferrer" href={faucet}  className='item--link font-easport w-full block py-2 pl-3 text-rose-2000' >
-                                Get 1000 SFS (Testnet)
+                                Get 1200 SFS (Testnet)
                             </a>
                         </li>
                     </ul>
