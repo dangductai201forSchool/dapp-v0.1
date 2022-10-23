@@ -146,5 +146,21 @@
     "psg": {
         "name": "Paris Saint-Germain",
         "logo-url": "https://brandlogos.net/wp-content/uploads/2013/10/paris-saint-germain-fc-vector-logo.png"
+    },
+    "Benfica": {
+        "name": "Benfica",
+        "logo-url": "https://logos-world.net/wp-content/uploads/2020/11/Benfica-Logo-700x394.png"
+    },
+    "RB Leipzig": {
+        "name": "RB Leipzig",
+        "logo-url": "https://static.wikia.nocookie.net/logopedia/images/9/92/RB_Leipzig_logo_%282009-2010%29.svg/revision/latest?cb=20140624195947"
+    },
+    "Borussia Dortmund": {
+        "name": "Borussia Dortmund",
+        "logo-url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg"
+    },
+    "Athletic Club": {
+        "name": "Athletic Club",
+        "logo-url": "https://logos-world.net/wp-content/uploads/2020/11/Athletic-Bilbao-Logo.png"
     }
 }
