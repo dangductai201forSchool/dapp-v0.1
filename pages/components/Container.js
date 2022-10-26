@@ -27,7 +27,7 @@ export default function Container() {
             return (
                 <div className='sidebar__top md:p-3 text-center'>
                     <span className='box--logo max-w-[120px] hidden md:inline-block'>
-                        <img className='img--logo' src="/logo.png"></img>
+                        <img className='img--logo' src="/logo1.png"></img>
                     </span>
                     <span className='block text-left pt-3 pl-6 md:hidden' onClick ={() => setIsLeftMenuDisplay(false)}>
                         <i className='las la-times text-rose-3000 text-2xl'></i>

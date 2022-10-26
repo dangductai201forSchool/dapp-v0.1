@@ -45,10 +45,7 @@ const Home = () => {
 					<p className="busdreward-item about-content-list font-easport">
 						Busd reward
 					</p>
-				</div>
-				
-				<div className="about-buynow">
-					<img src="\logo.png"></img>
+					<div className="about-buynow">
 					<div className="home-buynow-btn-div">
 						<div className="home-buynow-btn">
 							<a target="_blank" rel="noreferrer" href="https://pancakeswap.finance">
@@ -56,6 +53,12 @@ const Home = () => {
 							</a>
 						</div>
 					</div>
+				</div>
+				</div>
+				
+				<div className="about-buynow">
+					<img src="\logo1.png"></img>
+				
 				</div>
 			</div>
 		</div>

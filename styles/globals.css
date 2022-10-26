@@ -22717,6 +22717,7 @@ video {
 .mb-4 {
 	margin-bottom: 1rem;
 }
+
 .mb-2 {
 	margin-bottom: 0.5rem;
 }
@@ -24351,7 +24352,7 @@ video {
 	background-color: #e72e6e !important;
 }
 .bg-primary-pink-3000 {
-	background-color:  #055757 !important;
+	background-color:  #0f0f0f !important;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain, cover;
@@ -25971,6 +25972,7 @@ div.border-rose-3000.p-3 {
 
 .home-content {
 	padding: 2rem 0;
+	background-image: ;
 }
 
 .nftcg-content-text {
@@ -26021,7 +26023,11 @@ div.border-rose-3000.p-3 {
 }
 
 .about-buynow > img {
-	padding:2rem 0 0 3rem;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 35%;
 }
 
 .about-content {
@@ -26295,4 +26301,7 @@ div.border-rose-3000.p-3 {
 
 .DAO__main-left {
 	background-color: rgba(255,255,255,0);
+}
+.phone-logo{
+	padding-top: 1rem;
 }

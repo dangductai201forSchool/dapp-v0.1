@@ -24,7 +24,6 @@ const Header = () => {
 		<div className="DAO__header pl-4 pr-4 py-4 lg:px-11">
 			<div className="flex flex-col md:flex-row md:justify-between md:items-center border-b-2 border-gray-300">
 				<div className="mb-4 md:hidden">
-					<img className="w-[60px] m-auto" src="./logo-crop.png"></img>
 				</div>
 				<div className=" text-rose-3000 relative md:static">
 					<h2 className="text-3xl font-easport !font-bold text-rose-3000 mb-2">

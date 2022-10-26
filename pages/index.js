@@ -12,7 +12,7 @@ export default function Home() {
           name="SportFantasy"
           content="Play prediction game to earn and buying NFT card game"
         />
-        <link rel="icon" href="./logo-crop.png" />
+        <link rel="icon" href="./logo1.png" />
       </Head>
       <Container></Container>
     </div>
